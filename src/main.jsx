@@ -6,23 +6,33 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import User from "./pages/User/User";
 import Admin from "./pages/Admin";
+import App from "./App";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/login',
     element: <Login />,
   },
   {
-    path: '/home',
-    element: <Home />, // Ensure this path uses the Home component
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: '/about',
+    element: <Home />,
   },
   {
     path: '/user',
-    element: <User />, // Add route for User page
+    element: <User />,
   },
   {
     path: '/admin',
     element: <Admin />,
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard />,
   },
 ]);
 

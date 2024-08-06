@@ -14,7 +14,7 @@ const Login = () => {
       navigate('/admin');
     } else if (username === 'user' && password === 'user') {
       setErrorMessage('');
-      navigate('/home');
+      navigate('/');
     } else {
       setErrorMessage('Invalid username or password');
     }

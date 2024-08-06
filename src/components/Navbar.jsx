@@ -14,20 +14,30 @@ const Navbar = ({ isAdmin, handleLogout }) => {
           <a className="text-2xl font-bold">Eco-City</a>
         </div>
         <div className="hidden md:flex items-center gap-6">
-          <Link to="/home" className="hover:text-gray-400 transition-colors duration-300">
-            Home
-          </Link>
           {isAdmin && (
-            <Link to="/admin" className="hover:text-gray-400 transition-colors duration-300">
+            <Link
+              to="/about"
+              className="hover:text-gray-400 transition-colors duration-300"
+            >
+              About
+            </Link>
+          )}
+          {isAdmin && (
+            <Link
+              to="/dashboard"
+              className="hover:text-gray-400 transition-colors duration-300"
+            >
               Dashboard
             </Link>
           )}
-          <button
-            onClick={handleLogout}
-            className="hover:text-gray-400 transition-colors duration-300"
-          >
-            Logout
-          </button>
+          <Link to="/login">
+            <button
+              onClick={handleLogout}
+              className="hover:text-gray-400 transition-colors duration-300"
+            >
+              Logout
+            </button>
+          </Link>
         </div>
       </div>
     </div>
