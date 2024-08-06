@@ -11,8 +11,22 @@ const Home = () => {
     navigate('/');
   };
 
+  const handleBack = () => {
+    navigate(-1); // Возвращаемся на предыдущую страницу
+  };
+
   return (
     <div>
+      <Navbar />
+      <div className="flex justify-between p-4">
+        <button
+          onClick={handleBack}
+          className="btn bg-grey-500  transition-colors duration-300"
+        >
+          Back
+        </button>
+        
+      </div>
       <div className="flex flex-col items-center p-4 font-sans">
         <div className="flex flex-col items-center p-6 bg-gray-50 min-h-screen">
           <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mb-12">

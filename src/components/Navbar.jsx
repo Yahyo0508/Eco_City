@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ isAdmin, handleLogout }) => {
+  const navigate = useNavigate(); // Инициализируем хук useNavigate
+
+  const handleBack = () => {
+    navigate(-1); // Возвращаемся на предыдущую страницу
+  };
+
   return (
     <div className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
@@ -30,6 +36,12 @@ const Navbar = ({ isAdmin, handleLogout }) => {
               Dashboard
             </Link>
           )}
+          <button
+            onClick={handleBack}
+            className="btn hover:text-gray-400 transition-colors duration-300"
+          >
+            Back
+          </button>
           <Link to="/login">
             <button
               onClick={handleLogout}
