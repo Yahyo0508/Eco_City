@@ -5,16 +5,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import Home from "./pages/Home/Home";
 import App from "./App";
-import Navbar from "./components/Navbar";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Home/>,
+    path: "/",
     element: <App/>,
-    children: [
-      <Navbar/>
-    ]
   },
 ]);
 
