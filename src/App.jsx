@@ -9,6 +9,8 @@ const App = () => {
     <>
      <Navbar/> 
      <Table/>
+     
+
      </>
   )
 }
