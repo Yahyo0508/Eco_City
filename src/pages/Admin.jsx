@@ -1,13 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Home from './Home/Home';
+import User from './User/User';
 
 const Admin = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    <Home/>
+    <User/>
     navigate('/');
   };
 
