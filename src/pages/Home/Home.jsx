@@ -1,6 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Navbar from '../../components/Navbar';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,7 +13,6 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="flex flex-col items-center p-4 font-sans">
         <div className="flex flex-col items-center p-6 bg-gray-50 min-h-screen">
           <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mb-12">

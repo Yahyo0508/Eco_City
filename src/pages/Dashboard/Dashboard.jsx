@@ -1,14 +1,14 @@
-import React from 'react';
-import Table from '../../components/Table/Table';
-import App from '../../App';
+import React from 'react'
+import Table from '../../components/Table/Table'
+import Navbar from '../../components/Navbar'
 
 const Dashboard = () => {
   return (
     <div>
-      
-      <App/>
+      <Navbar/>
+      <Table/>
     </div>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard

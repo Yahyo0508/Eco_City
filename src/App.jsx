@@ -1,17 +1,15 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import Table from './components/Table/Table'
+import Home from './pages/Home/Home'
 
 
 
 const App = () => {
   return (
     <>
-     <Navbar/> 
-     <Table/>
-     
-
-     </>
+     <Navbar/>
+     <Home/>
+    </>
   )
 }
 
