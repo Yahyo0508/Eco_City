@@ -6,7 +6,6 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Clear user session or any other necessary cleanup
     localStorage.removeItem('authToken');
     sessionStorage.removeItem('userSession');
     navigate('/');
@@ -15,9 +14,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-
       <div className="flex flex-col items-center p-4 font-sans">
-
         <div className="flex flex-col items-center p-6 bg-gray-50 min-h-screen">
           <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mb-12">
             <div className="md:w-1/3 mb-4 md:mb-0">
