@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ isAdmin, handleLogout }) => {
   return (
     <div className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
@@ -13,19 +14,28 @@ const Navbar = () => {
           <a className="text-2xl font-bold">Eco-City</a>
         </div>
         <div className="hidden md:flex items-center gap-6">
-            
-          <a
-            href="#"
+          <Link
+            to="/home"
             className="hover:text-gray-400 transition-colors duration-300"
           >
             Home
-          </a>
-          <a
-            href="#"
-            className="hover:text-gray-400 transition-colors duration-300"
-          >
-            Dashboard
-          </a>
+          </Link>
+          {isAdmin && (
+            <Link
+              to="/dashboard"
+              className="hover:text-gray-400 transition-colors duration-300"
+            >
+              Dashboard
+            </Link>
+          )}
+          <Link to="/">
+            <button
+              onClick={handleLogout}
+              className="hover:text-gray-400 transition-colors duration-300"
+            >
+              Logout
+            </button>
+          </Link>
         </div>
       </div>
     </div>
